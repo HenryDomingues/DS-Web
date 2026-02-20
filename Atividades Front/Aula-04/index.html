@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Atividade-03</title>
+</head>
+
+<body>
+
+<h1>Formulário do Aluno 👨‍🏫</h1>
+
+<form onsubmit="return false;">
+    
+    <label>Nome do Aluno:</label>
+    <input type="text" id="nome"><br><br>
+
+    <label>Email do aluno:</label>
+    <input type="email" id="email"><br><br>
+
+    <label>Código do aluno:</label>
+    <input type="number" id="ID"><br><br>
+
+    <label>Telefone do aluno:</label>
+    <input type="number" id="telefone"><br><br>
+
+    <label>Turma do aluno:</label>
+    <input type="number" id="turma"><br><br>
+
+    <!-- BOTÃO PRINCIPAL -->
+    <button type="button" onclick="cadastrarAluno()">Cadastrar</button>
+
+</form>
+
+<h2>Lista de Alunos 📋</h2>
+<div id="listaAlunos"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
