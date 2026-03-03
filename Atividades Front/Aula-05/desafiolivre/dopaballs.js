@@ -183,8 +183,3 @@ window.onload = function() {
     }
     atualizarRanking();
 }
-/* Dentro da função criarParticulas */
-p.style.zIndex = 5;
-
-/* Dentro da função spawnAlvo */
-alvo.style.zIndex = 6;
