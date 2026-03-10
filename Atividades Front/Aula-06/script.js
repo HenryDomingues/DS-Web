@@ -4,6 +4,8 @@
 //- Valida os campos utilizando regras e expressões regulares (Regex)
 // - Exibe mensagens de erro em elementos <span>
 // - Caso tudo esteja correto, mostra mensagem de sucesso
+// regex: usada para procurar, testar, substituir ou extrair padrões de texto dentro de strings
+//string: uma sequência de caracteres, ou seja, letras, números, símbolos ou espaços, tratados como um bloco de texto
 
 
 document.getElementById("formulario").addEventListener("submit", function (event) {
@@ -17,7 +19,7 @@ document.getElementById("formulario").addEventListener("submit", function (event
 
     //FUNÇÃO DE ERRO(mostra os erros)
     // Mostra mensagens de erro nos spans correspondentes
-    // e marca o formulário como inválido quando necessário
+    // marca o formulário como inválido quando necessário
 
     function erro(id, mensagem) {
         document.getElementById(id).textContent = mensagem;
@@ -26,7 +28,7 @@ document.getElementById("formulario").addEventListener("submit", function (event
 
 
     // VALIDAÇÃO DE NOME(o trim remove espaços antes e depois)
-    //- Deve ter pelo menos 3 caracteres(lenght sé a função usada para isso)
+    //- Deve ter pelo menos 3 caracteres(lenght é a função usada para isso)
 
     let nome = document.getElementById("nome").value.trim();
 
@@ -39,7 +41,7 @@ document.getElementById("formulario").addEventListener("submit", function (event
 
     // VALIDAÇÃO DE EMAIL
     //- Verifica formato padrão de e-mail usando Regex
-    // regex.xxx.test = serve para verificar se o valor digitado corresponde ao padrão definido pela expressão regular. Retorna true ou false.
+    // !regex.xxx.test = serve para verificar se o valor digitado corresponde ao padrão definido pela expressão regular. Retorna true ou false.
 
     let email = document.getElementById("email").value.trim();
     let regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -67,7 +69,8 @@ document.getElementById("formulario").addEventListener("submit", function (event
     }
 
 
-    //    VALIDAÇÃO DE CPFsímbolo	significado:
+    //    VALIDAÇÃO DE CPF
+    // significado dos símbolos:
     // \d	número
     // {3}	três números
     // .	ponto
